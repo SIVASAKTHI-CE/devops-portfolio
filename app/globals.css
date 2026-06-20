@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, "Cascadia Code", Menlo, Consolas,
+    monospace;
+  --font-sans: -apple-system, "Segoe UI", Inter, ui-sans-serif, system-ui, Roboto, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-warn: var(--warn);
+  --color-fail: var(--fail);
+}
+
+:root {
+  /* Light theme -- "paper console" */
+  --bg: #f7f8fa;
+  --bg-raised: #ffffff;
+  --ink: #161922;
+  --ink-dim: #5b6172;
+  --line: #dde1e8;
+  --accent: #0f9e8e;
+  --accent-dim: #0f9e8e1a;
+  --warn: #b3760a;
+  --fail: #d6455d;
+}
+
+.dark {
+  /* Dark theme -- "deploy console" */
+  --bg: #0b0e14;
+  --bg-raised: #11151d;
+  --ink: #e8eaed;
+  --ink-dim: #8b93a3;
+  --line: #1f2530;
+  --accent: #5eead4;
+  --accent-dim: #5eead41a;
+  --warn: #f59e0b;
+  --fail: #fb7185;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-dim);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+.cursor-blink::after {
+  content: "▋";
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+}
+
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-dim);
+  }
+  70% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+.status-dot {
+  animation: pulse-dot 2s ease-out infinite;
+}
