@@ -11,7 +11,7 @@ export const profile = {
   email: "alex.rivera@example.com",
   github: "https://github.com/yourusername",
   linkedin: "https://linkedin.com/in/yourusername",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/devops-portfolio/resume.pdf",
   naukri: "https://www.naukri.com/mnjuser/profile",
   avatarInitials: "AR",
 };
