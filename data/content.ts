@@ -4,16 +4,16 @@
 // ─────────────────────────────────────────────────────────────
 
 export const profile = {
-  name: "Alex Rivera",
+  name: "Siva Sakthi K",
   role: "DevOps Engineer",
   tagline: "I build the pipes that ship code safely, fast, and without waking anyone up at 3 AM.",
   location: "Bengaluru, India",
-  email: "alex.rivera@example.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  email: "sivasakthi8441@gmail.com",
+  github: "https://github.com/SIVASAKTHI-CE/",
+  linkedin: "https://www.linkedin.com/in/sivasakthi06/",
   resumeUrl: "/devops-portfolio/resume.pdf",
   naukri: "https://www.naukri.com/mnjuser/profile",
-  avatarInitials: "AR",
+  avatarInitials: "SK",
 };
 
 export const stats = [
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     longDescription:
       "This pipeline takes a commit from push to production with no manual steps. It lints and runs unit tests, builds a Docker image, pushes it to a registry, then performs a rolling deployment to Kubernetes. A readiness probe gates traffic, so old pods only terminate after new pods report healthy — meaning users never hit a dead instance during a release.",
     stack: ["GitHub Actions", "Docker", "Kubernetes", "Helm"],
-    repoUrl: "https://github.com/yourusername/zero-downtime-pipeline",
+    repoUrl: "https://github.com/SIVASAKTHI-CE/zero-downtime-pipeline",
     status: "deployed",
   },
   {
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     longDescription:
       "Designed as a teaching artifact as much as a tool: every resource block is commented to explain the 'why', not just the 'what'. State is stored remotely with locking to prevent concurrent-apply conflicts, and the whole stack can be destroyed and rebuilt identically in minutes.",
     stack: ["Terraform", "AWS", "GitHub Actions"],
-    repoUrl: "https://github.com/yourusername/infra-as-code-starter",
+    repoUrl: "https://github.com/SIVASAKTHI-CE/infra-as-code-starter",
     status: "deployed",
   },
   {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     longDescription:
       "Built on a free-tier cluster to show the mechanics of how Kubernetes replaces pods gradually during a release. Includes a deliberately broken version you can deploy to watch the automatic rollback trigger in real time.",
     stack: ["Kubernetes", "Docker", "kubectl"],
-    repoUrl: "https://github.com/yourusername/k8s-rolling-update-demo",
+    repoUrl: "https://github.com/SIVASAKTHI-CE/k8s-rolling-update-demo",
     status: "building",
   },
   {
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     longDescription:
       "Captures deploy duration, error rate, and pod restart counts on a single dashboard. Alert rules are version-controlled alongside the infrastructure they monitor, so monitoring changes go through the same review process as code.",
     stack: ["Prometheus", "Grafana", "Docker Compose"],
-    repoUrl: "https://github.com/yourusername/uptime-observability-stack",
+    repoUrl: "https://github.com/SIVASAKTHI-CE/uptime-observability-stack",
     status: "planned",
   },
 ];
