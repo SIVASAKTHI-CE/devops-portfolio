@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 
 export const metadata: Metadata = {
-  title: "Alex Rivera — DevOps Engineer",
+  title: "SIVASAKTHI — Jr. DevOps Engineer",
   description:
     "DevOps engineer portfolio — CI/CD pipelines, infrastructure as code, container orchestration, and zero-downtime deployment systems.",
 };
